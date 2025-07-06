@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticket Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2C3E50;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #34495E;
+        }
+        select, input, button {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #2980B9;
+            color: white;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+        button:hover {
+            background-color: #1f618d;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Bus Ticket Payment</h1>
+        <form action="submit_payment.php" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="route">Select Route</label>
+            <select id="route" name="route" required>
+                <option value="surat-navsari">Surat to Navsari</option>
+                <option value="all-india">All India Tour</option>
+            </select>
+
+            <label for="departure-date">Departure Date</label>
+            <input type="date" id="departure-date" name="departure_date" required>
+
+            <label for="passengers">Number of Passengers</label>
+            <input type="number" id="passengers" name="passengers" min="1" max="10" required>
+
+            <label for="class">Travel Class</label>
+            <select id="class" name="class" required>
+                <option value="economy">Economy</option>
+                <option value="business">Business</option>
+                <option value="first">First Class</option>
+            </select>
+
+            <label for="card-type">Card Type</label>
+            <select id="card-type" name="card_type" required>
+                <option value="visa">Visa</option>
+                <option value="mastercard">MasterCard</option>
+                <option value="rupay">Rupay</option>
+            </select>
+
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" name="card_number" required>
+
+            <label for="exp-date">Expiration Date</label>
+            <input type="month" id="exp-date" name="exp_date" required>
+
+            <label for="cvv">CVV</label>
+            <input type="password" id="cvv" name="cvv" required>
+
+            <button type="submit">Pay Now</button>
+        </form>
+    </div>
+    
+
+    <footer>
+        <p>&copy; 2025 [Your Bus Service Name]. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

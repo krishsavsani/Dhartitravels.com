@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <style>
+    body { font-family: Arial; background: #f4f4f4; }
+    .login-box {
+      width: 300px; margin: 100px auto; padding: 30px;
+      background: white; border-radius: 10px; box-shadow: 0 0 10px #aaa;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%; padding: 10px; margin: 10px 0;
+    }
+    input[type="submit"] {
+      width: 100%; padding: 10px; background: #333; color: white; border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Login</h2>
+    <form action="login.php" method="post">
+      <input type="text" name="username" placeholder="Username" required><br>
+      <input type="password" name="password" placeholder="Password" required><br>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+</body>
+</html>
